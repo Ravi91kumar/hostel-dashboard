@@ -1,0 +1,46 @@
+
+<html>
+<head>
+<title>Admin Panel</title>
+<style>
+table{border-collapse:collapse;width:100%}
+td,th{border:1px solid #333;padding:6px;text-align:center}
+input,button{padding:6px;margin:5px}
+</style>
+</head>
+<body>
+
+<h2 align="center">Admin Panel</h2>
+
+<form method="post" align="center">
+Reg No <input name="reg">
+Field <input name="field">
+Value <input name="value remember">
+<button>Update</button>
+</form>
+
+<h3 align="center">Payment Entry</h3>
+<form action="/payment" method="post" align="center">
+Reg No <input name="reg">
+Amount <input name="amount">
+<button>Add Payment</button>
+</form>
+
+<table>
+<tr>
+{% for col in data[0].keys() %}
+<th>{{col}}</th>
+{% endfor %}
+</tr>
+
+{% for row in data %}
+<tr>
+{% for val in row.values() %}
+<td>{{val}}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>
