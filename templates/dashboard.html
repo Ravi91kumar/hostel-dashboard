@@ -1,0 +1,37 @@
+
+<html>
+<head>
+<title>Dashboard</title>
+<style>
+body{font-family:Arial;background:#f5f5f5}
+.container{width:85%;margin:auto;background:white;padding:20px}
+table{width:100%;border-collapse:collapse}
+td,th{border:1px solid #444;padding:8px;text-align:center}
+button{padding:10px;margin-top:10px}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2 align="center">Hostel & Mess Dashboard</h2>
+
+<table>
+<tr><th>Field</th><th>Value</th></tr>
+{% for k,v in student.items() %}
+<tr><td>{{k}}</td><td>{{v}}</td></tr>
+{% endfor %}
+</table>
+
+<h3 align="center">
+Total: {{totals[0]}} |
+Paid: {{totals[1]}} |
+Due: {{totals[2]}}
+</h3>
+
+<center>
+<a href="/export"><button>Download PDF</button></a>
+</center>
+
+</div>
+</body>
+</html>
