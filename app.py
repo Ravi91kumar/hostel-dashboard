@@ -10,7 +10,7 @@ from datetime import datetime
 app = Flask(__name__)
 app.secret_key = "hostel_secret"
 
-DATA_FILE = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRkcb3Ky6EgeRlpGOCYnah4O6cgte4lsAEfhXBDG-Y-L1ba5CN1HJdiaz38eTPuqFFK-nxEUsiM1i6e/pub?output=xlsx"
+DATA_FILE = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRkcb3Ky6EgeRlpGOCYnah4O6cgte4lsAEfhXBDG-Y-L1ba5CN1HJdiaz38eTPuqFFK-nxEUsiM1i6e/pub?output=csv"
 
 def calculate(row):
     total = row.get("Total Payable", 0)
